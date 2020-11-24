@@ -1,5 +1,7 @@
+require('marko/node-require').install();
+require('marko/express');
+
 const express = require('express');
-const { rootCertificates } = require('tls');
 const app = express();
 
 const rotas = require('../app/rotas/rotas');
