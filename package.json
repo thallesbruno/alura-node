@@ -1,0 +1,23 @@
+{
+  "name": "alura-node",
+  "version": "1.0.0",
+  "description": "Livraria Alura",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thallesbruno/alura-node.git"
+  },
+  "author": "Thalles Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thallesbruno/alura-node/issues"
+  },
+  "homepage": "https://github.com/thallesbruno/alura-node#readme",
+  "dependencies": {
+    "express": "4.16.3"
+  }
+}
