@@ -34,6 +34,20 @@ module.exports = (app) => {
         resp.marko(require('../views/livros/form/form.marko'));
     });
 
+    app.get('/livros/form/:id', function(req, resp) {
+        const id = req.params.id;
+        const livroDao = new LivroDao(db);
+
+        livroDao.buscaPorId(id)
+            .then(livro => 
+                resp.marko(
+                    require('../views/livros/form/form.marko'),
+                    { livro: livro }
+                )
+            )
+            .catch(erro => console.log(erro));
+    });
+
     app.post('/livros', function(req, resp) {
         console.log(req.body);
 
