@@ -4,10 +4,7 @@
         
         <form action="/livros" method="post">
 
-            <div if(data.livro.id)>
-                <input type="hidden" name="_method" value="PUT">
-                <input type="hidden" id="id" name="id" value="${data.livro.id}" />
-            </div>
+            <input type="hidden" id="id" name="id" value="${data.livro.id}" />
 
             <div>
                 <label for="titulo">Titulo:</label>
@@ -19,7 +16,7 @@
             </div>
             <div>
                 <label for="descricao">Descrição:</label>
-                <textarea cols="20" rows="10"  id="descricao" name="descricao" placeholder="fale sobre o livro">${data.livro.descricao}</textarea>
+                <textarea cols="20" rows="10"  id="descricao" name="descricao" value="${data.livro.descricao}" placeholder="fale sobre o livro" />
             </div>
 
             <input type="submit" value="Salvar" />
